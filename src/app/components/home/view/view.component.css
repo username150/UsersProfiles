@@ -1,0 +1,53 @@
+.container {
+    width: 1300px;
+    margin: 0 auto;
+}
+.d-flex {
+    display: flex;
+}
+.justify-content-between {
+    justify-content: space-around;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1300px) {
+    .container {
+        width: 1000px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 700px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        max-width: 700px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+}
+.user-info {
+    width: 200px;
+    height: 200px;
+    background: #5c5263;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.icon {
+    font-size: 60px;
+}
+.name a {
+    color: blueviolet;
+}

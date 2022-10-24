@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="d-flex justify-content-between flex-wrap">
+
+        <div class="card" *ngFor="let user of usersList">
+
+            <div class="slide slide1">
+
+                <div class="content">
+
+                    <div class="icon">
+
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+
+                    </div>
+
+                    <div class="user_info">
+                        <h3 (click)="navigate(user)">{{ user.name }}</h3>
+                        <a href="mailto:{{user.email}}" target="_top"> {{user.email}}</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="slide slide2">
+
+                <div class="content">
+                    <div class="posts-count" (click)="navigate(user)">
+                        <i class="fa fa-comments-o" aria-hidden="true"></i>
+
+                        <span style="color: #a14f86;">10</span>
+                    </div>
+                    <p>
+                        <b><i class="fa fa-phone-square" aria-hidden="true"></i> Phone: </b>
+                        <span class="val">{{user.phone}}</span>
+                    </p>
+                    <p>
+                        <b><i class="fa fa-building" aria-hidden="true"></i> Company: </b>
+                        <span class="val">{{user.company.name}}</span>
+                    </p>
+                    <p>
+                        <b> <i class="fa fa-chrome" aria-hidden="true"></i> WebSite: </b>
+                        <span class="val"> <a style="color:blueviolet" href="http://{{user.website}}" target="_blank">{{user.website}}</a> </span>
+                    </p>
+                    <p>
+                        
+                        <b><i class="fa fa-globe" aria-hidden="true"></i> City: </b>
+                        <span class="val">{{user.address.city}}</span>
+                    </p>
+                    <p>
+                        <b><i class="fa fa-map-marker" aria-hidden="true"></i> Street: </b>
+                        <span class="val">{{user.address.street}}</span>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
